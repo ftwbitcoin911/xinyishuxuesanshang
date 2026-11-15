@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>烟台初三（上）数学 · 知识点精讲 + 经典习题（鲁教版五四制八上）</title>
+<style>
+  :root{
+    --ink:#1c2127; --ink2:#454d55; --ink3:#7b848d;
+    --line:#e3e1da; --paper:#fffefb; --bg:#f2f1ec; --soft:#f8f7f2;
+    --c1:#2f6f8f; --c2:#b5651d; --c3:#3f7d52; --c4:#6b5b95; --c5:#a4453b;
+    --lv1:#3f7d52; --lv2:#b5651d; --lv3:#a4453b;
+    --warn:#b8352a;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; padding:0 16px 72px; background:var(--bg); color:var(--ink);
+    font-family:"Noto Serif SC","Source Han Serif SC","Songti SC",Georgia,serif;
+    line-height:1.8; font-size:15.5px;
+  }
+  .wrap{max-width:900px;margin:0 auto}
+
+  /* ---------- 顶部 ---------- */
+  header.top{
+    background:var(--paper); border:1px solid var(--line); border-top:5px solid var(--c1);
+    padding:36px 40px 26px; margin:28px 0 0;
+  }
+  h1{
+    font-size:28px; margin:0 0 8px; letter-spacing:.5px; font-weight:700; line-height:1.4;
+    font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  }
+  .sub{color:var(--ink2); font-size:14px; margin:0}
+  .sub b{color:var(--c2)}
+  .meta{
+    display:flex; flex-wrap:wrap; gap:0; margin-top:18px; border-top:1px dashed var(--line); padding-top:14px;
+    font-size:13px; color:var(--ink3);
+  }
+  .meta span{padding-right:18px; margin-right:18px; border-right:1px solid var(--line)}
+  .meta span:last-child{border:none}
+
+  /* ---------- 粘性导航 ---------- */
+  nav.toc{
+    position:sticky; top:0; z-index:20; background:rgba(255,254,251,.96);
+    border:1px solid var(--line); border-top:none; padding:10px 18px; margin:0 0 26px;
+    backdrop-filter:blur(6px);
+  }
+  .toc-inner{display:flex; flex-wrap:wrap; gap:6px; align-items:center}
+  .toc a{
+    font-size:12.5px; text-decoration:none; color:var(--ink2); padding:3px 9px;
+    border:1px solid var(--line); border-radius:2px; background:#fbfaf6;
+    font-family:"Noto Sans SC",sans-serif; white-space:nowrap;
+  }
+  .toc a:hover{color:#fff; background:var(--c1); border-color:var(--c1)}
+  .tools{margin-left:auto; display:flex; gap:6px}
+  .tools button{
+    font:inherit; font-size:12px; padding:3px 10px; cursor:pointer; color:var(--ink2);
+    background:#fbfaf6; border:1px solid var(--line); border-radius:2px;
+    font-family:"Noto Sans SC",sans-serif;
+  }
+  .tools button:hover{border-color:var(--c1); color:var(--c1)}
+
+  /* ---------- 章节 ---------- */
+  section.chapter{
+    background:var(--paper); border:1px solid var(--line); margin-bottom:24px; overflow:hidden;
+    scroll-margin-top:64px;
+  }
+  .ch-head{
+    display:flex; align-items:baseline; gap:14px; padding:24px 34px 16px;
+    border-bottom:3px solid var(--soft); position:relative;
+  }
+  .ch-head::before{
+    content:""; position:absolute; left:0; top:0; width:5px; height:100%;
+  }
+  .c1 .ch-head::before{background:var(--c1)} .c2 .ch-head::before{background:var(--c2)}
+  .c3 .ch-head::before{background:var(--c3)} .c4 .ch-head::before{background:var(--c4)}
+  .c5 .ch-head::before{background:var(--c5)}
+  .c0 .ch-head::before{background:var(--ink3)}
+  .ch-no{
+    font-family:"Noto Sans SC",sans-serif; font-size:11.5px; letter-spacing:2px;
+    color:var(--ink3); white-space:nowrap; padding-top:4px;
+  }
+  .ch-head h2{
+    margin:0; font-size:21px; font-weight:700; letter-spacing:.5px;
+    font-family:"Noto Sans SC","PingFang SC",sans-serif;
+  }
+  .ch-head .weight{margin-left:auto;font-size:12px;color:var(--ink3);white-space:nowrap}
+  .ch-body{padding:4px 34px 26px}
+
+  h3{
+    font-size:15px; margin:26px 0 10px; color:var(--ink); font-weight:700;
+    font-family:"Noto Sans SC",sans-serif; letter-spacing:1px;
+    display:flex; align-items:center; gap:9px;
+  }
+  h3::before{content:"";width:16px;height:3px;background:var(--c1);display:inline-block;flex:none}
+  .c2 h3::before{background:var(--c2)} .c3 h3::before{background:var(--c3)}
+  .c4 h3::before{background:var(--c4)} .c5 h3::before{background:var(--c5)}
+  h4{
+    font-size:13.5px; margin:16px 0 6px; color:var(--ink2); font-weight:700;
+    font-family:"Noto Sans SC",sans-serif; letter-spacing:.5px;
+  }
+  p{margin:7px 0}
+  ul{margin:6px 0; padding-left:20px}
+  li{margin:4px 0}
+  li::marker{color:var(--ink3)}
+  .k{font-weight:700}
+  .m{
+    font-family:"Cambria Math",Cambria,"Times New Roman",serif; font-style:italic;
+    letter-spacing:.2px;
+  }
+  .formula{
+    margin:11px 0; padding:12px 16px; background:var(--soft); border-left:3px solid var(--line);
+    font-size:14.5px; line-height:2;
+  }
+  .formula .m{font-size:15.5px;color:#111}
+  .hl{
+    background:linear-gradient(transparent 62%, #fbe9c9 62%); padding:0 2px;
+  }
+
+  .note{
+    margin:13px 0; padding:12px 16px; background:#fdf6f3; border:1px solid #f1e0d6; font-size:14px;
+    color:#5a3a2b;
+  }
+  .note .lbl{
+    display:inline-block; font-weight:700; color:var(--warn); font-size:12px; letter-spacing:1.5px;
+    font-family:"Noto Sans SC",sans-serif; margin-bottom:3px;
+  }
+  .tip{
+    margin:13px 0; padding:12px 16px; background:#f3f7f4; border:1px solid #d8e6dc; font-size:14px;
+    color:#2f4a38;
+  }
+  .tip .lbl{
+    display:inline-block; font-weight:700; color:var(--lv1); font-size:12px; letter-spacing:1.5px;
+    font-family:"Noto Sans SC",sans-serif; margin-bottom:3px;
+  }
+
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+  th,td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top}
+  th{background:var(--soft);font-weight:600;font-family:"Noto Sans SC",sans-serif;font-size:12.5px;color:var(--ink2)}
+  td .m{font-size:14.5px}
+  .small{font-size:13px;color:var(--ink3)}
+
+  /* ---------- 题目 ---------- */
+  .ex-title{
+    display:flex; align-items:center; gap:12px; margin:30px 0 12px; padding-top:14px;
+    border-top:2px solid var(--soft);
+  }
+  .ex-title h3{margin:0}
+  .ex-title span{font-size:12px;color:var(--ink3);margin-left:auto;font-family:"Noto Sans SC",sans-serif}
+
+  .q{
+    border:1px solid var(--line); border-left:3px solid #ddd; background:#fefdfa;
+    padding:14px 18px 6px; margin:12px 0;
+  }
+  .q.lv1{border-left-color:var(--lv1)}
+  .q.lv2{border-left-color:var(--lv2)}
+  .q.lv3{border-left-color:var(--lv3)}
+  .q-h{display:flex; gap:9px; align-items:baseline; flex-wrap:wrap}
+  .qno{
+    font-family:"Noto Sans SC",sans-serif; font-size:11.5px; font-weight:700; color:#fff;
+    background:var(--ink3); padding:1px 6px; border-radius:2px; flex:none; line-height:1.7;
+  }
+  .q.lv1 .qno{background:var(--lv1)} .q.lv2 .qno{background:var(--lv2)} .q.lv3 .qno{background:var(--lv3)}
+  .tag{
+    font-family:"Noto Sans SC",sans-serif; font-size:11px; padding:1px 6px; border-radius:2px;
+    border:1px solid currentColor; flex:none;
+  }
+  .lv1 .tag{color:var(--lv1)} .lv2 .tag{color:var(--lv2)} .lv3 .tag{color:var(--lv3)}
+  .q-body{flex:1; min-width:200px}
+  .q-body p{margin:0 0 4px}
+
+  details.ans{margin:8px 0 10px; border-top:1px dashed var(--line); padding-top:8px}
+  details.ans summary{
+    cursor:pointer; font-size:12.5px; color:var(--c1); font-family:"Noto Sans SC",sans-serif;
+    letter-spacing:1px; list-style:none; user-select:none; display:inline-block;
+    padding:2px 8px; border:1px solid #cfe0e8; background:#f4f9fb; border-radius:2px;
+  }
+  details.ans summary::-webkit-details-marker{display:none}
+  details.ans summary::before{content:"▸ "}
+  details.ans[open] summary::before{content:"▾ "}
+  .sol{font-size:14.2px; color:#2c3238; padding:10px 0 2px; border-left:2px solid #eef1f2; padding-left:14px; margin-top:8px}
+  .sol .step{display:block;margin:3px 0}
+  .sol .res{color:var(--warn);font-weight:700}
+  .sol .why{color:var(--ink3);font-size:13px}
+
+  /* ---------- 图形 ---------- */
+  figure{margin:14px 0; text-align:center}
+  figure svg{max-width:100%; height:auto}
+  figcaption{font-size:12.5px;color:var(--ink3);margin-top:6px;font-family:"Noto Sans SC",sans-serif}
+  .figrow{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-around}
+  .figrow figure{flex:1;min-width:200px}
+  svg text{font-family:"Cambria Math",Cambria,Georgia,serif; font-size:12.5px; fill:#333}
+  svg .ln{stroke:#4a5259; stroke-width:1.4; fill:none}
+  svg .dash{stroke:#9aa3ab; stroke-width:1.1; fill:none; stroke-dasharray:4 3}
+  svg .pt{fill:#2f6f8f}
+  svg .lbl{fill:#a4453b; font-style:italic}
+
+  footer{
+    margin-top:14px; padding:22px; font-size:12.5px; color:var(--ink3);
+    border-top:1px solid var(--line); text-align:center; line-height:2;
+  }
+
+  @media(max-width:680px){
+    body{padding:0 10px 50px;font-size:15px}
+    header.top{padding:24px 20px 18px;margin-top:0}
+    h1{font-size:21px}
+    .ch-head{padding:18px 18px 12px;flex-wrap:wrap}
+    .ch-head .weight{margin-left:0;width:100%;padding-left:0}
+    .ch-body{padding:2px 18px 20px}
+    .meta span{padding-right:10px;margin-right:10px}
+    table{font-size:12.8px}
+    th,td{padding:6px 8px}
+    nav.toc{padding:8px 10px}
+    .tools{margin-left:0;width:100%;justify-content:flex-start}
+  }
+
+  @media print{
+    body{background:#fff;padding:0;font-size:10.5pt}
+    nav.toc{display:none}
+    header.top,section.chapter{border-color:#bbb}
+    section.chapter{page-break-inside:avoid}
+    .q{page-break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>烟台初三（上）数学 · 知识点精讲 + 经典习题</h1>
+  <p class="sub">教材：<b>鲁教版（五四学制）数学 八年级上册</b>　山东教育出版社（2026 秋修订版）</p>
+  <div class="meta">
+    <span>烟台五四学制 · 初三 = 八年级</span>
+    <span>5 章 · 47 道分层习题</span>
+    <span>解析可折叠 · 支持打印</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <div class="toc-inner">
+    <a href="#ch1">一 因式分解</a>
+    <a href="#ch2">二 分式与分式方程</a>
+    <a href="#ch3">三 数据分析</a>
+    <a href="#ch4">四 平移与旋转</a>
+    <a href="#ch5">五 四边形</a>
+    <a href="#ch6">综合压轴</a>
+    <a href="#ch7">速查与易错</a>
+    <div class="tools">
+      <button id="openAll">展开全部解析</button>
+      <button id="closeAll">收起</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ 第一章 ============ -->
+<section class="chapter c1" id="ch1">
+  <div class="ch-head">
+    <span class="ch-no">CHAPTER 01</span>
+    <h2>因式分解</h2>
+    <span class="weight">代数地基 · 不牢则分式必崩</span>
+  </div>
+  <div class="ch-body">
+
+    <h3>1.1 概念与判断</h3>
+    <p>把一个<b>多项式</b>化成几个<b>整式的积</b>的形式，叫做因式分解。它是整式乘法的<b>逆变形</b>，属于恒等变形，前后值不变。</p>
+    <div class="formula"><span class="m">(a+b)(a−b) ⇄ a² − b²</span>　左→右：整式乘法；右→左：因式分解</div>
+    <p><b>判断一个变形是不是因式分解，看三条：</b></p>
+    <ul>
+      <li>左边必须是<b>多项式</b>（几个单项式的和）；</li>
+      <li>右边必须是<b>积</b>的形式，且每个因式都是<b>整式</b>；</li>
+      <li>必须<b>分解到底</b>（在有理数范围内不能再分）。</li>
+    </ul>
+    <p class="small">反例：<span class="m">x²−1 = x(x − 1/x)</span> 不是，因为 <span class="m">1/x</span> 不是整式；<span class="m">x²+2x+1 = (x+1)²</span> 是；<span class="m">x²−1+2 = x²+1</span> 不是（右边是和）。</p>
+
+    <h3>1.2 提公因式法</h3>
+    <p><b>公因式的确定（三步取法）：</b>系数取<b>最大公约数</b>；字母取<b>相同的字母</b>；指数取<b>最低次幂</b>。公因式可以是单项式，也可以是<b>多项式整体</b>。</p>
+    <div class="formula">
+      <span class="m">ma + mb + mc = m(a + b + c)</span><br>
+      例：<span class="m">−6a³b² + 9a²b³ − 3a²b² = 3a²b²(−2a + 3b − 1)</span>
+    </div>
+    <p><b>三个高频细节：</b></p>
+    <ul>
+      <li>某项被<b>完全提出</b>时，括号里要留 <b>1</b>，不能空着；</li>
+      <li>首项为负，习惯先提"−"号，<b>括号内各项全部变号</b>；</li>
+      <li>公因式是多项式时，注意<b>互为相反数</b>的整体：<span class="m">(a−b)² = (b−a)²</span>，但 <span class="m">(a−b)³ = −(b−a)³</span>。</li>
+    </ul>
+
+    <h3>1.3 公式法</h3>
+    <table>
+      <tr><th style="width:22%">公式</th><th style="width:30%">结构特征</th><th>要点</th></tr>
+      <tr><td>平方差<br><span class="m">a²−b²=(a+b)(a−b)</span></td><td>两项、异号、都能写成某式的平方</td><td>系数是平方数、指数是偶数才可能是平方项</td></tr>
+      <tr><td>完全平方<br><span class="m">a²±2ab+b²=(a±b)²</span></td><td>三项、首末同号且为平方、中间是两底数积的 2 倍</td><td>中间项符号决定括号内是"+"还是"−"</td></tr>
+    </table>
+    <p class="small">教材正文以提公因式、公式法为主；<b>十字相乘</b>（<span class="m">x²+px+q</span>，找和为 <span class="m">p</span>、积为 <span class="m">q</span> 的两数）、<b>分组分解</b>、<b>配方法</b>（如 <span class="m">x⁴+4</span>）常作为拓展在习题中出现。</p>
+
+    <h3>1.4 解题流程与四大应用</h3>
+    <div class="formula"><b>一提 → 二套 → 三查 → 四彻底</b>：提公因式 → 试公式 → 查项数是否还能再分 → 结果化为最简积</div>
+    <ul>
+      <li><b>简便计算</b>：<span class="m">2026²−2025²=(2026+2025)(2026−2025)=4051</span>；</li>
+      <li><b>代数式求值</b>：把条件整体代入因式分解后的式子；</li>
+      <li><b>整除证明</b>：把式子分解成含某因数的积；</li>
+      <li><b>几何应用</b>：面积、周长与整式的关系（如拼图验证公式）。</li>
+    </ul>
+
+    <div class="note">
+      <span class="lbl">易错清单</span><br>
+      ① 分解不彻底：<span class="m">x⁴−1=(x²+1)(x²−1)</span> 还要写成 <span class="m">(x²+1)(x+1)(x−1)</span>；<br>
+      ② 提公因式漏 1：<span class="m">a²+a≠a·a</span>；<br>
+      ③ 符号丢三落四：<span class="m">−x²+4=−(x+2)(x−2)</span>；<br>
+      ④ 把"积化和"当成因式分解；<br>
+      ⑤ 完全平方公式里 <span class="m">2ab</span> 漏乘 2，如把 <span class="m">4x²+6x+9</span> 误判为完全平方式。
+    </div>
+
+    <div class="ex-title"><h3>经典习题</h3><span>8 题 · 基础 → 拔高</span></div>
+
+    <div class="q lv1">
+      <div class="q-h"><span class="qno">1-1</span><span class="tag">基础</span>
+        <div class="q-body"><p>分解因式：<span class="m">−6a³b² + 9a²b³ − 3a²b²</span></p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">① 定公因式：系数 <span class="m">gcd(6,9,3)=3</span>；字母取 <span class="m">a²b²</span>（最低次幂）。</span>
+          <span class="step">② 提出后逐项定商：<span class="m">−6a³b²÷3a²b²=−2a</span>，<span class="m">9a²b³÷3a²b²=3b</span>，<span class="m">−3a²b²÷3a²b²=−1</span>。</span>
+          <span class="step res">答案：3a²b²(−2a + 3b − 1)</span>
+          <span class="step why">提醒：最后一项商是 −1，不能漏写。</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv1">
+      <div class="q-h"><span class="qno">1-2</span><span class="tag">基础</span>
+        <div class="q-body"><p>分解因式：<span class="m">x³ − 4x</span>；　<span class="m">4x² − 12x + 9</span></p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">（1）先提 <span class="m">x</span>：<span class="m">x(x²−4)</span>，再用平方差：<span class="m">x(x+2)(x−2)</span>。</span>
+          <span class="step">（2）首末为 <span class="m">(2x)²</span> 与 <span class="m">3²</span>，中间 <span class="m">−12x = −2·2x·3</span>，是完全平方式：<span class="m">(2x−3)²</span>。</span>
+          <span class="step res">答案：x(x+2)(x−2)；　(2x−3)²</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv1">
+      <div class="q-h"><span class="qno">1-3</span><span class="tag">基础</span>
+        <div class="q-body"><p>分解因式：<span class="m">(a+b)² − 4(a+b) + 4</span>；　<span class="m">3x² − 27</span></p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">（1）把 <span class="m">a+b</span> 看作整体 <span class="m">t</span>：<span class="m">t²−4t+4=(t−2)²</span>，回代得 <span class="m">(a+b−2)²</span>。</span>
+          <span class="step">（2）先提 3：<span class="m">3(x²−9)=3(x+3)(x−3)</span>。</span>
+          <span class="step res">答案：(a+b−2)²；　3(x+3)(x−3)</span>
+          <span class="step why">考点：整体思想 + 提公因式优先。</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv2">
+      <div class="q-h"><span class="qno">1-4</span><span class="tag">中档</span>
+        <div class="q-body"><p>分解因式：<span class="m">a⁴ − 8a² + 16</span></p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">① 三看作完全平方式：<span class="m">(a²)² − 2·a²·4 + 4² = (a²−4)²</span>。</span>
+          <span class="step">② 括号内还能分解：<span class="m">a²−4=(a+2)(a−2)</span>。</span>
+          <span class="step res">答案：(a+2)²(a−2)²</span>
+          <span class="step why">易错：写成 (a²−4)² 即止，属于"分解不彻底"。</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv2">
+      <div class="q-h"><span class="qno">1-5</span><span class="tag">中档</span>
+        <div class="q-body"><p>已知 <span class="m">a+b=4</span>，<span class="m">ab=3</span>，求 <span class="m">a²b+ab²</span>、<span class="m">a²+b²</span>、<span class="m">(a−b)²</span> 的值。</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">① <span class="m">a²b+ab² = ab(a+b) = 3×4 = <b>12</b></span></span>
+          <span class="step">② <span class="m">a²+b² = (a+b)² − 2ab = 16 − 6 = <b>10</b></span></span>
+          <span class="step">③ <span class="m">(a−b)² = a²+b² − 2ab = 10 − 6 = <b>4</b></span></span>
+          <span class="step why">方法：把 a+b、ab 当"整体已知量"，所有对称式都能用它们表示。这是整式与分式化简求值的通用套路。</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv2">
+      <div class="q-h"><span class="qno">1-6</span><span class="tag">中档</span>
+        <div class="q-body"><p>用简便方法计算：<span class="m">99² + 198 + 1</span>；　<span class="m">2026² − 2026 × 2025</span></p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">（1）<span class="m">99² + 2×99×1 + 1² = (99+1)² = 100² = <b>10000</b></span></span>
+          <span class="step">（2）提公因式：<span class="m">2026×(2026−2025) = 2026</span></span>
+          <span class="step why">看到"平方 + 2 倍积 + 1"就想到完全平方；看到"两项含相同因数"就提公因式。</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv3">
+      <div class="q-h"><span class="qno">1-7</span><span class="tag">拔高</span>
+        <div class="q-body"><p>分解因式：<span class="m">x⁴ + 4</span></p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">① 直接看是"两项和"，既非平方差也无公因式，用<b>配方法</b>造出平方差：</span>
+          <span class="step"><span class="m">x⁴ + 4 = (x⁴ + 4x² + 4) − 4x² = (x²+2)² − (2x)²</span></span>
+          <span class="step">② 用平方差：<span class="m">= (x²+2+2x)(x²+2−2x)</span></span>
+          <span class="step res">答案：(x²+2x+2)(x²−2x+2)</span>
+          <span class="step why">关键：加一项再减一项（加 4x² 减 4x²），凑成完全平方后作差。这两个二次因式在有理数范围内不能再分解。</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv3">
+      <div class="q-h"><span class="qno">1-8</span><span class="tag">拔高</span>
+        <div class="q-body"><p>（1）证明：对任意整数 <span class="m">n</span>，<span class="m">n³ − n</span> 一定能被 6 整除。<br>
+        （2）若 <span class="m">x² + kx + 12</span> 能分解为 <span class="m">(x+a)(x+b)</span>（<span class="m">a、b</span> 为整数），求整数 <span class="m">k</span> 的所有可能值。</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step"><b>（1）</b><span class="m">n³−n = n(n²−1) = n(n−1)(n+1) = (n−1)·n·(n+1)</span></span>
+          <span class="step">这是三个<b>连续整数</b>的积：其中必有偶数（被 2 整除），也必有 3 的倍数，且 2 与 3 互质，所以积必被 <span class="m">2×3=6</span> 整除。</span>
+          <span class="step"><b>（2）</b>展开得 <span class="m">a+b=k</span>，<span class="m">ab=12</span>。整数对 <span class="m">(a,b)</span> 有：<span class="m">(1,12)、(2,6)、(3,4)</span> 及全部取负。</span>
+          <span class="step">对应 <span class="m">k = 13、8、7、−13、−8、−7</span></span>
+          <span class="step res">答案：k ∈ {±7, ±8, ±13}</span>
+          <span class="step why">这是"十字相乘"的逆向考法，分类要全（正负都算）。</span>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ 第二章 ============ -->
+<section class="chapter c2" id="ch2">
+  <div class="ch-head">
+    <span class="ch-no">CHAPTER 02</span>
+    <h2>分式与分式方程</h2>
+    <span class="weight">全册分值最高 · 计算 + 应用</span>
+  </div>
+  <div class="ch-body">
+
+    <h3>2.1 分式的概念</h3>
+    <p>形如 <span class="m">A/B</span>（<span class="m">A、B</span> 是整式，<span class="m">B</span> 中含字母且 <span class="m">B≠0</span>）的式子叫分式。<b>判断标准只有一条：分母中是否含字母。</b></p>
+    <table>
+      <tr><th style="width:30%">问题</th><th>条件</th></tr>
+      <tr><td>分式<b>有意义</b></td><td>分母 <span class="m">B ≠ 0</span></td></tr>
+      <tr><td>分式<b>无意义</b></td><td>分母 <span class="m">B = 0</span></td></tr>
+      <tr><td>分式<b>值为 0</b></td><td>分子 <span class="m">A = 0</span> <b>且</b> 分母 <span class="m">B ≠ 0</span>（两者同时满足）</td></tr>
+      <tr><td>分式<b>值为正/负</b></td><td>看分子分母<b>同号/异号</b>，常与不等式结合</td></tr>
+    </table>
+
+    <h3>2.2 基本性质与变形</h3>
+    <div class="formula"><span class="m">A/B = (A·M)/(B·M) = (A÷M)/(B÷M)</span>　（<span class="m">M</span> 是不等于 0 的整式）</div>
+    <ul>
+      <li><b>约分</b>：分子分母同除以公因式，结果叫<b>最简分式</b>（分子分母没有公因式）。约分前必须先<b>因式分解</b>。</li>
+      <li><b>通分</b>：化成分母相同的分式。<b>最简公分母</b> = 系数的最小公倍数 × 各因式的最高次幂。</li>
+      <li><b>符号法则</b>：分子、分母、分式本身三个符号，<b>任改两个，值不变</b>：<span class="m">−A/B = A/(−B) = −(A/B)</span>。</li>
+      <li><b>繁分式</b>：用"除法"或"乘以倒数"化简，如 <span class="m">(1+1/x)/(1−1/x) = (x+1)/(x−1)</span>。</li>
+    </ul>
+
+    <h3>2.3 四则运算</h3>
+    <table>
+      <tr><th style="width:20%">运算</th><th>法则</th><th style="width:32%">技巧</th></tr>
+      <tr><td>乘法</td><td>分子×分子，分母×分母</td><td>先分解因式、交叉约分，再乘，减少计算量</td></tr>
+      <tr><td>除法</td><td>乘除数的倒数：<span class="m">A/B ÷ C/D = A/B · D/C</span></td><td>除号变乘号后，把后面整个分式<b>颠倒</b></td></tr>
+      <tr><td>乘方</td><td><span class="m">(A/B)ⁿ = Aⁿ/Bⁿ</span></td><td>负号与括号要分清</td></tr>
+      <tr><td>加减</td><td>同分母：分母不变，分子相加减；异分母：先通分</td><td>分子相减时<b>整体加括号</b>，防止符号错</td></tr>
+    </table>
+    <p class="small">混合运算顺序：先乘方 → 再乘除 → 最后加减；有括号先算括号内。结果必须化成<b>最简分式或整式</b>。</p>
+
+    <h3>2.4 分式方程</h3>
+    <div class="formula">
+      <b>解法四步：</b>找最简公分母 → 两边同乘，化为整式方程 → 解整式方程 → <b>验根</b>（代入最简公分母，是否为 0）→ 写结论
+    </div>
+    <ul>
+      <li><b>增根</b>：使最简公分母为 0 的根。产生原因是去分母时乘了可能为 0 的式子，<b>扩大了未知数的取值范围</b>。</li>
+      <li><b>方程无解的两种情况</b>：① 整式方程本身无解；② 解出的根全是增根。</li>
+      <li><b>含参问题</b>："方程有增根"→ 令最简公分母为 0 求出增根，再代回<b>整式方程</b>求参数；"方程无解"→ 两种情况都要讨论。</li>
+    </ul>
+
+    <h3>2.5 实际应用：三类模型</h3>
+    <table>
+      <tr><th style="width:18%">类型</th><th>基本关系</th><th>常见等量关系</th></tr>
+      <tr><td>工程</td><td>工作量 = 效率 × 时间</td><td>各部分工作量之和 = 1（总量设为 1）</td></tr>
+      <tr><td>行程</td><td>时间 = 路程 ÷ 速度</td><td>时间差、时间相等、往返时间相同</td></tr>
+      <tr><td>销售</td><td>单价 = 总价 ÷ 数量</td><td>数量差、单价倍数、总价差</td></tr>
+    </table>
+    <p><b>答题模板：</b>设未知数 → 列表表示各量 → 找等量关系列方程 → 解方程 → <b>双检验</b>（验根 + 验实际意义）→ 作答。</p>
+
+    <h3>2.6 化简求值的三种常用技巧</h3>
+    <ul>
+      <li><b>整体代换</b>：已知 <span class="m">1/a − 1/b = 3</span> 这类条件，化为 <span class="m">a−b</span> 与 <span class="m">ab</span> 的关系整体代入；</li>
+      <li><b>设 k 法</b>：已知 <span class="m">a/b = 2/3</span>，设 <span class="m">a=2k, b=3k</span>；</li>
+      <li><b>先化简后求值</b>：不要一开始就代入数字，先约到最简，再代入，且注意<b>取值要使原式有意义</b>。</li>
+    </ul>
+
+    <div class="note">
+      <span class="lbl">易错清单</span><br>
+      ① 去分母时<b>漏乘不含分母的项</b>（尤其常数项）；<br>
+      ② 忘记验根，把增根当解；<br>
+      ③ 混淆"约分"（化简用）与"去分母"（解方程用）；<br>
+      ④ 值为 0 只看分子，漏掉分母 ≠ 0；<br>
+      ⑤ 应用题结果不检验实际意义（人数、速度、长度不能为负）；<br>
+      ⑥ 化简求值时取了使分母为 0 的值。
+    </div>
+
+    <div class="ex-title"><h3>经典习题</h3><span>11 题 · 含 2 道应用题</span></div>
+
+    <div class="q lv1">
+      <div class="q-h"><span class="qno">2-1</span><span class="tag">基础</span>
+        <div class="q-body"><p>（1）当 <span class="m">x</span> 取何值时，分式 <span class="m">(x−1)/(x+2)</span> 有意义？值为 0？<br>
+        （2）当 <span class="m">x</span> 取何值时，分式 <span class="m">(x²−9)/(x−3)</span> 的值为 0？</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">（1）有意义：<span class="m">x+2≠0</span>，即 <span class="m">x≠−2</span>；值为 0：<span class="m">x−1=0</span> 且 <span class="m">x≠−2</span>，即 <span class="m">x=1</span>。</span>
+          <span class="step">（2）<span class="m">x²−9=0 → x=±3</span>，但 <span class="m">x=3</span> 时分母 <span class="m">x−3=0</span>，分式无意义，故舍去。</span>
+          <span class="step res">答案：x≠−2；x=1；x=−3</span>
+          <span class="step why">"值为 0"必须同时满足"分子=0"和"分母≠0"，这是必考陷阱。</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv1">
+      <div class="q-h"><span class="qno">2-2</span><span class="tag">基础</span>
+        <div class="q-body"><p>约分：<span class="m">(x²−4)/(x²−4x+4)</span>；　计算：<span class="m">1/(x−1) + 1/(x+1)</span></p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">（1）分子 <span class="m">(x+2)(x−2)</span>，分母 <span class="m">(x−2)²</span>，约去 <span class="m">(x−2)</span>：<span class="m">(x+2)/(x−2)</span>（<span class="m">x≠2</span>）。</span>
+          <span class="step">（2）通分：<span class="m">[(x+1)+(x−1)]/(x²−1) = 2x/(x²−1)</span>。</span>
+          <span class="step res">答案：(x+2)/(x−2)；　2x/(x²−1)</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv1">
+      <div class="q-h"><span class="qno">2-3</span><span class="tag">基础</span>
+        <div class="q-body"><p>计算：<span class="m">(a²−1)/a ÷ (a+1)</span></p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">除法转乘法：<span class="m">(a²−1)/a × 1/(a+1) = (a+1)(a−1)/[a(a+1)]</span></span>
+          <span class="step res">答案：(a−1)/a　（a≠0 且 a≠−1）</span>
+          <span class="step why">整式 <span class="m">(a+1)</span> 的分母看作 1，颠倒后即为 <span class="m">1/(a+1)</span>。</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv2">
+      <div class="q-h"><span class="qno">2-4</span><span class="tag">中档</span>
+        <div class="q-body"><p>解方程：<span class="m">1/(x−2) = 3/x</span></p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">最简公分母 <span class="m">x(x−2)</span>，两边同乘：<span class="m">x = 3(x−2)</span></span>
+          <span class="step">解得 <span class="m">x = 3x − 6 → 2x = 6 → x = 3</span></span>
+          <span class="step">检验：<span class="m">x(x−2)=3×1=3≠0</span>，成立。</span>
+          <span class="step res">答案：x = 3</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv2">
+      <div class="q-h"><span class="qno">2-5</span><span class="tag">中档</span>
+        <div class="q-body"><p>解方程：<span class="m">x/(x−3) − 2 = 3/(x−3)</span></p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">两边同乘 <span class="m">(x−3)</span>：<span class="m">x − 2(x−3) = 3</span>（注意常数 2 也要乘！）</span>
+          <span class="step"><span class="m">x − 2x + 6 = 3 → −x = −3 → x = 3</span></span>
+          <span class="step">检验：<span class="m">x=3</span> 时 <span class="m">x−3=0</span>，是<b>增根</b>。</span>
+          <span class="step res">答案：原方程无解</span>
+          <span class="step why">这是最典型的"增根陷阱"：整式方程有解，但解是增根，所以原方程无解。结论必须写"无解"。</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv2">
+      <div class="q-h"><span class="qno">2-6</span><span class="tag">中档</span>
+        <div class="q-body"><p>解方程：<span class="m">(x+1)/(x−1) − 4/(x²−1) = 1</span></p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">最简公分母 <span class="m">(x+1)(x−1)</span>，两边同乘：</span>
+          <span class="step"><span class="m">(x+1)² − 4 = x² − 1</span></span>
+          <span class="step"><span class="m">x² + 2x + 1 − 4 = x² − 1 → 2x − 3 = −1 → x = 1</span></span>
+          <span class="step">检验：<span class="m">x=1</span> 时公分母为 0，是增根。</span>
+          <span class="step res">答案：原方程无解</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv2">
+      <div class="q-h"><span class="qno">2-7</span><span class="tag">中档</span>
+        <div class="q-body"><p>先化简，再求值：<span class="m">(1 − 1/(x+1)) ÷ x/(x²−1)</span>，其中 <span class="m">x = 2</span>。</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">括号内通分：<span class="m">(x+1−1)/(x+1) = x/(x+1)</span></span>
+          <span class="step">除法转乘法：<span class="m">x/(x+1) × (x²−1)/x = x/(x+1) × (x+1)(x−1)/x</span></span>
+          <span class="step">约分得 <span class="m">x−1</span>；代入 <span class="m">x=2</span> 得 <span class="m">1</span>。</span>
+          <span class="step res">答案：化简为 x−1，值为 1</span>
+          <span class="step why">若题目改成"x 取一个你喜欢的数"，必须避开 x=0、±1 这些使原式无意义的值。</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv3">
+      <div class="q-h"><span class="qno">2-8</span><span class="tag">拔高</span>
+        <div class="q-body"><p>若关于 <span class="m">x</span> 的方程 <span class="m">(x+m)/(x−2) = 3</span> 有增根，求 <span class="m">m</span> 的值；并说明此时方程的解的情况。</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">① 去分母：<span class="m">x + m = 3(x−2) → x + m = 3x − 6 → 2x = m + 6</span></span>
+          <span class="step">② 所以 <span class="m">x = (m+6)/2</span>。增根必使最简公分母 <span class="m">x−2=0</span>，即 <span class="m">x = 2</span>。</span>
+          <span class="step">③ 令 <span class="m">(m+6)/2 = 2</span>，得 <span class="m">m = −2</span>。</span>
+          <span class="step res">答案：m = −2；此时整式方程的解恰为增根，原分式方程无解。</span>
+          <span class="step why">"有增根"求参的关键：增根来自最简公分母为 0，而不是原方程的任意根。</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv3">
+      <div class="q-h"><span class="qno">2-9</span><span class="tag">拔高</span>
+        <div class="q-body"><p>已知 <span class="m">1/a − 1/b = 3</span>，求 <span class="m">(2a + 3ab − 2b)/(a − 2ab − b)</span> 的值。</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">① 由条件通分：<span class="m">(b−a)/(ab) = 3 → b − a = 3ab → a − b = −3ab</span></span>
+          <span class="step">② 分子：<span class="m">2(a−b) + 3ab = 2(−3ab) + 3ab = −3ab</span></span>
+          <span class="step">③ 分母：<span class="m">(a−b) − 2ab = −3ab − 2ab = −5ab</span></span>
+          <span class="step">④ 原式 <span class="m">= (−3ab)/(−5ab) = 3/5</span></span>
+          <span class="step res">答案：3/5</span>
+          <span class="step why">技巧：把 a−b 与 ab 看成两个"整体字母"，分子分母都只在用它们表示，ab 最后约掉。</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv3">
+      <div class="q-h"><span class="qno">2-10</span><span class="tag">拔高</span>
+        <div class="q-body"><p>某工程，甲队单独做需 20 天完成，乙队单独做需 30 天完成。现由乙队先做 5 天，然后两队合做，还需多少天完成？</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">① 设总工作量为 1，甲效率 <span class="m">1/20</span>，乙效率 <span class="m">1/30</span>。</span>
+          <span class="step">② 设合做 <span class="m">x</span> 天完成，列方程：<span class="m">5/30 + x(1/20 + 1/30) = 1</span></span>
+          <span class="step">③ <span class="m">1/6 + x/12 = 1 → x/12 = 5/6 → x = 10</span></span>
+          <span class="step">④ 检验：<span class="m">x=10</span> 符合实际，分母不为 0。</span>
+          <span class="step res">答案：还需合做 10 天</span>
+          <span class="step why">工程问题核心：<b>各段工作量相加 = 1</b>；"先做""中途离开""休息"都是分段累加。</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv3">
+      <div class="q-h"><span class="qno">2-11</span><span class="tag">拔高</span>
+        <div class="q-body"><p>某文具店用 2000 元购进 A 种钢笔，用 2400 元购进 B 种钢笔，B 种每支进价比 A 种高 2 元，且两种钢笔购进数量相同。<br>
+        （1）求 A、B 两种钢笔每支的进价；<br>
+        （2）若 A 种售价 15 元/支，B 种售价 20 元/支，全部售完可获利多少元？</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step"><b>（1）</b>设 A 种每支 <span class="m">x</span> 元，则 B 种每支 <span class="m">(x+2)</span> 元。</span>
+          <span class="step">数量相同：<span class="m">2000/x = 2400/(x+2)</span></span>
+          <span class="step">去分母：<span class="m">2000(x+2) = 2400x → 2000x + 4000 = 2400x → 400x = 4000 → x = 10</span></span>
+          <span class="step">检验：<span class="m">x=10</span> 时分母不为 0，且符合实际。</span>
+          <span class="step">答：A 种进价 10 元/支，B 种进价 12 元/支，各购进 200 支。</span>
+          <span class="step"><b>（2）</b>利润 <span class="m">= 200×(15−10) + 200×(20−12) = 1000 + 1600 = 2600</span> 元。</span>
+          <span class="step res">答案：进价 10 元、12 元；共获利 2600 元</span>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ 第三章 ============ -->
+<section class="chapter c3" id="ch3">
+  <div class="ch-head">
+    <span class="ch-no">CHAPTER 03</span>
+    <h2>数据分析</h2>
+    <span class="weight">概念 + 计算 + 读图（新版变化最大）</span>
+  </div>
+  <div class="ch-body">
+
+    <h3>3.1 平均数与加权平均数</h3>
+    <div class="formula">
+      算术平均数：<span class="m">x̄ = (x₁ + x₂ + … + xₙ) / n</span><br>
+      加权平均数：<span class="m">x̄ = (x₁f₁ + x₂f₂ + … + xₖfₖ) / (f₁ + f₂ + … + fₖ)</span>
+    </div>
+    <p><b>"权"的三种表现形式：</b>次数（人数、天数）、比例（2:3:5）、百分比（30%、30%、40%）。权的意义是<b>该数据的重要程度</b>，权越大，对平均数的影响越大。</p>
+    <p class="small">当各权之和为 1 时（百分比形式），可简化为 <span class="m">x̄ = x₁p₁ + x₂p₂ + … + xₖpₖ</span>，不必再除。</p>
+
+    <h3>3.2 平均数、中位数、众数</h3>
+    <table>
+      <tr><th style="width:16%">统计量</th><th style="width:34%">定义要点</th><th>特点</th></tr>
+      <tr><td>平均数</td><td>总和 ÷ 个数，用到<b>全部</b>数据</td><td>信息最全，但<b>怕极端值</b></td></tr>
+      <tr><td>中位数</td><td>排序后中间位置的数；<span class="m">n</span> 为偶数时取中间两数平均</td><td>只看位置，<b>抗极端值</b></td></tr>
+      <tr><td>众数</td><td>出现次数最多的数据，可以有多个，也可能没有</td><td>反映"最常见"，不受极端值影响</td></tr>
+    </table>
+
+    <h3>3.3 方差与标准差</h3>
+    <div class="formula">
+      <span class="m">s² = 1/n · [ (x₁−x̄)² + (x₂−x̄)² + … + (xₙ−x̄)² ]</span>　　标准差 <span class="m">s = √(s²)</span>
+    </div>
+    <ul>
+      <li>方差刻画数据的<b>波动大小（离散程度）</b>：方差越小越稳定、越整齐；</li>
+      <li><b>变换规律</b>：每个数据都加 <span class="m">a</span>，平均数加 <span class="m">a</span>、方差<b>不变</b>；每个数据都乘 <span class="m">k</span>，平均数乘 <span class="m">k</span>、方差变为 <span class="m">k²s²</span>。</li>
+    </ul>
+
+    <h3>3.4 箱线图与四分位数（新版新增）</h3>
+    <div class="formula">
+      五数概括：<b>最小值 — Q₁ — 中位数 Q₂ — Q₃ — 最大值</b>　　四分位距 <span class="m">IQR = Q₃ − Q₁</span>
+    </div>
+    <p><b>四分位数的确定（教材法）：</b>数据从小到大排列 → 求中位数把数据分成上下两半 → 下半部分的中位数是 <span class="m">Q₁</span>，上半部分的中位数是 <span class="m">Q₃</span>。</p>
+    <p><b>箱线图能读出什么：</b>中间 50% 数据的集中范围（箱体长度 = IQR）、数据的对称性（中位线是否居中）、极端值离群程度（须的长度）。<b>箱体越短，中间数据越集中。</b></p>
+
+    <h3>3.5 用样本估计总体 & 统计量选择</h3>
+    <ul>
+      <li>用<b>样本平均数</b>估计总体平均水平，用<b>样本方差</b>估计总体波动；</li>
+      <li>决策类题目："平均数相同看方差，方差相同看趋势（增长/稳定）"，答题必须<b>数据 + 结论 + 理由</b>三件套。</li>
+      <li>常见情境：有极端值（收入、房价）→ 用中位数；关注"最常见"（鞋码、销量）→ 用众数；关注总量（总产量）→ 用平均数。</li>
+    </ul>
+
+    <div class="note">
+      <span class="lbl">易错清单</span><br>
+      ① 求中位数<b>没排序</b>；<br>
+      ② 加权平均数把"权"当普通数据，或忘除权和；<br>
+      ③ 方差漏平方、漏除 <span class="m">n</span>（初中是 <span class="m">1/n</span>，不是 <span class="m">1/(n−1)</span>）；<br>
+      ④ 只比平均数就下结论，忽略稳定性；<br>
+      ⑤ 箱线图把 <span class="m">Q₁、Q₃</span> 误认为最小值、最大值；<br>
+      ⑥ 结论题只写数字不写判断，导致"会算不得分"。
+    </div>
+
+    <div class="ex-title"><h3>经典习题</h3><span>8 题 · 计算 + 决策</span></div>
+
+    <div class="q lv1">
+      <div class="q-h"><span class="qno">3-1</span><span class="tag">基础</span>
+        <div class="q-body"><p>求数据 <span class="m">2, 3, 3, 5, 7</span> 的平均数、中位数、众数、方差。</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">平均数：<span class="m">(2+3+3+5+7)/5 = 20/5 = 4</span></span>
+          <span class="step">中位数：已排序，第 3 个数 <span class="m">= 3</span>；众数 <span class="m">= 3</span></span>
+          <span class="step">方差：偏差 <span class="m">−2, −1, −1, 1, 3</span>，平方和 <span class="m">4+1+1+1+9 = 16</span>，<span class="m">s² = 16/5 = 3.2</span></span>
+          <span class="step res">答案：平均数 4，中位数 3，众数 3，方差 3.2</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv1">
+      <div class="q-h"><span class="qno">3-2</span><span class="tag">基础</span>
+        <div class="q-body"><p>某同学平时成绩 90 分（占 30%）、期中 85 分（占 30%）、期末 88 分（占 40%），求学期总评成绩。</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step"><span class="m">x̄ = 90×30% + 85×30% + 88×40% = 27 + 25.5 + 35.2</span></span>
+          <span class="step res">答案：87.7 分</span>
+          <span class="step why">权重和为 100%，直接用"数据×百分比"相加，不必再除。</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv1">
+      <div class="q-h"><span class="qno">3-3</span><span class="tag">基础</span>
+        <div class="q-body"><p>10 名同学的引体向上成绩（个）：<span class="m">8, 9, 9, 10, 10, 10, 11, 12, 12, 13</span>。求平均数、中位数、众数。</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">平均数：<span class="m">(8+9+9+10+10+10+11+12+12+13)/10 = 104/10 = 10.4</span></span>
+          <span class="step">中位数：<span class="m">n=10</span> 为偶数，取第 5、6 个的平均值 <span class="m">(10+10)/2 = 10</span></span>
+          <span class="step">众数：10（出现 3 次，最多）</span>
+          <span class="step res">答案：10.4；10；10</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv2">
+      <div class="q-h"><span class="qno">3-4</span><span class="tag">中档</span>
+        <div class="q-body"><p>甲、乙两组各 5 名同学的成绩：<br>
+        甲：<span class="m">10, 9, 11, 10, 10</span>；　乙：<span class="m">8, 12, 10, 10, 10</span>。<br>
+        哪一组成绩更稳定？说明理由。</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">两组平均数都是 <span class="m">10</span>，需比较方差。</span>
+          <span class="step">甲：偏差 <span class="m">0, −1, 1, 0, 0</span>，<span class="m">s² = (0+1+1+0+0)/5 = 0.4</span></span>
+          <span class="step">乙：偏差 <span class="m">−2, 2, 0, 0, 0</span>，<span class="m">s² = (4+4+0+0+0)/5 = 1.6</span></span>
+          <span class="step res">答案：甲组更稳定。因为平均数相同，而甲的方差 0.4 ＜ 乙的 1.6，方差越小波动越小。</span>
+          <span class="step why">答题必须"比较方差 + 给出结论 + 说明理由"，只写"甲方差小"会丢分。</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv2">
+      <div class="q-h"><span class="qno">3-5</span><span class="tag">中档</span>
+        <div class="q-body"><p>数据 <span class="m">1, 3, 5, 7, 9, 11, 13, 15</span>，求中位数、下四分位数 <span class="m">Q₁</span>、上四分位数 <span class="m">Q₃</span> 及四分位距 <span class="m">IQR</span>。</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">① <span class="m">n=8</span>，中位数 <span class="m">Q₂ = (7+9)/2 = 8</span></span>
+          <span class="step">② 下半部分 <span class="m">1, 3, 5, 7</span> → <span class="m">Q₁ = (3+5)/2 = 4</span></span>
+          <span class="step">③ 上半部分 <span class="m">9, 11, 13, 15</span> → <span class="m">Q₃ = (11+13)/2 = 12</span></span>
+          <span class="step">④ <span class="m">IQR = 12 − 4 = 8</span></span>
+          <span class="step res">答案：Q₂=8，Q₁=4，Q₃=12，IQR=8</span>
+          <span class="step why">IQR 表示"中间 50% 数据的跨度"，是箱体的长度。</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv2">
+      <div class="q-h"><span class="qno">3-6</span><span class="tag">中档</span>
+        <div class="q-body"><p>为估计鱼塘中鱼的总数，先从塘中捞出 200 条鱼做上标记后放回；待标记鱼完全混合后，再捞出 200 条，发现其中有 8 条带标记。估计鱼塘中鱼的总数。</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">样本中带标记的比例 <span class="m">= 8/200 = 1/25</span>，用它估计总体比例。</span>
+          <span class="step">设总数为 <span class="m">N</span>，则 <span class="m">200/N ≈ 1/25</span>，<span class="m">N ≈ 200 × 25 = 5000</span></span>
+          <span class="step res">答案：约 5000 条</span>
+          <span class="step why">这是"用样本估计总体"的典型应用（标记重捕法），本质是<b>比例相等</b>。</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv3">
+      <div class="q-h"><span class="qno">3-7</span><span class="tag">拔高</span>
+        <div class="q-body"><p>一组数据的平均数是 5，方差是 4。若把每个数据都乘 3 再加 2，得到一组新数据，求新数据的平均数和方差。</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">新数据 <span class="m">y = 3x + 2</span>：平均数 <span class="m">ȳ = 3×5 + 2 = 17</span></span>
+          <span class="step">加减常数不改变波动，乘 3 使偏差变为 3 倍，方差变为 <span class="m">3² = 9</span> 倍：<span class="m">s² = 9×4 = 36</span></span>
+          <span class="step res">答案：平均数 17，方差 36</span>
+          <span class="step why">口诀：<b>加不变方，乘要平方</b>（加常数方差不变，乘常数方差乘其平方）。</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv3">
+      <div class="q-h"><span class="qno">3-8</span><span class="tag">拔高</span>
+        <div class="q-body"><p>某公司 13 名员工的月工资（元）：经理 20000，2 名主管各 8000，10 名职员各 4000。<br>
+        （1）求月工资的平均数、中位数、众数；<br>
+        （2）哪个统计量更能代表该公司员工的一般工资水平？为什么？</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">（1）总额 <span class="m">= 20000 + 2×8000 + 10×4000 = 76000</span>，平均数 <span class="m">= 76000/13 ≈ 5846</span> 元。</span>
+          <span class="step">排序后第 7 个数是 4000，故中位数为 4000 元；众数也是 4000 元（出现 10 次）。</span>
+          <span class="step">（2）用<b>中位数（或众数）</b>更能代表一般水平。</span>
+          <span class="step res">答案：平均数约 5846 元，中位数 4000 元，众数 4000 元；中位数更具代表性。</span>
+          <span class="step why">因为经理的 20000 元是极端值，把平均数"拉高"了，而中位数只由位置决定，不受极端值影响。</span>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ 第四章 ============ -->
+<section class="chapter c4" id="ch4">
+  <div class="ch-head">
+    <span class="ch-no">CHAPTER 04</span>
+    <h2>图形的平移与旋转</h2>
+    <span class="weight">变换 · 作图 + 坐标 + 最短路径</span>
+  </div>
+  <div class="ch-body">
+
+    <h3>4.1 平移</h3>
+    <p><b>三要素：</b>平移<b>方向</b>、平移<b>距离</b>。平移由这两者唯一确定。</p>
+    <p><b>性质：</b>对应点所连的线段<b>平行（或在同一直线上）且相等</b>；对应线段平行且相等，对应角相等；图形的形状、大小都<b>不变</b>（前后全等）。</p>
+    <div class="formula">坐标规律：向右 <span class="m">a</span> 个单位 <span class="m">(x+a, y)</span>；向上 <span class="m">b</span> 个单位 <span class="m">(x, y+b)</span>，即"<b>左减右加，下减上加</b>"</div>
+    <p class="small">平移作图三步：定关键点 → 按方向和距离作对应点 → 顺次连线，写出结论。</p>
+
+    <h3>4.2 旋转</h3>
+    <p><b>三要素：</b>旋转<b>中心</b>、旋转<b>方向</b>（顺/逆时针）、旋转<b>角</b>。</p>
+    <p><b>性质：</b>① 对应点到旋转中心的距离<b>相等</b>；② 对应点与旋转中心连线所成的角都等于<b>旋转角</b>；③ 对应线段相等、对应角相等；④ 前后图形<b>全等</b>。</p>
+    <p class="small"><b>找旋转中心：</b>作两组对应点连线的<b>垂直平分线</b>，交点即为旋转中心。</p>
+    <div class="formula">
+      绕原点旋转 90°：逆时针 <span class="m">(x, y) → (−y, x)</span>；顺时针 <span class="m">(x, y) → (y, −x)</span><br>
+      绕原点旋转 180°：<span class="m">(x, y) → (−x, −y)</span>
+    </div>
+
+    <h3>4.3 中心对称与中心对称图形</h3>
+    <table>
+      <tr><th style="width:24%">概念</th><th>含义</th><th style="width:26%">举例</th></tr>
+      <tr><td>中心对称</td><td>一个图形绕某点旋转 <b>180°</b> 后与另一个图形重合（两个图形的关系）</td><td>成中心对称的两个三角形</td></tr>
+      <tr><td>中心对称图形</td><td>一个图形绕自身某点旋转 <b>180°</b> 后与<b>自身</b>重合</td><td>平行四边形、圆、正六边形、线段</td></tr>
+    </table>
+    <p class="small">性质：对称中心是对应点连线的<b>中点</b>，对应线段平行（或在同一直线）且相等。注意：等边三角形、正五边形是轴对称图形，<b>不是</b>中心对称图形。</p>
+
+    <h3>4.4 最短路径两模型</h3>
+    <table>
+      <tr><th style="width:26%">模型</th><th>作法</th></tr>
+      <tr><td>将军饮马<br><span class="small">同侧两点到直线上一点距离和最小</span></td><td>作其中一点关于直线的<b>对称点</b>，连接对称点与另一点，与直线的交点即为所求点</td></tr>
+      <tr><td>造桥选址<br><span class="small">两平行线间修垂直于河岸的桥</span></td><td>把一点沿垂直河岸方向<b>平移桥长</b>，连接平移后的点与另一点，交河岸于桥的一端，再过该点作垂线</td></tr>
+    </table>
+    <p class="small">两模型的本质相同：<b>用对称或平移把"折线"拉直</b>，再用"两点之间线段最短"。</p>
+
+    <div class="note">
+      <span class="lbl">易错清单</span><br>
+      ① 平移距离指<b>对应点连线的长度</b>，不是图形"看上去移动的横向距离"；<br>
+      ② 旋转角是<b>对应点与旋转中心连线的夹角</b>，不是图形外观转过的角度；<br>
+      ③ 旋转方向搞反；量角时顶点没对准旋转中心；<br>
+      ④ 作图后<b>对应点标错</b>，导致后面证全等时对应关系混乱；<br>
+      ⑤ 求最值忘记写依据"两点之间线段最短"；<br>
+      ⑥ 混淆"中心对称"（两个图形）与"中心对称图形"（一个图形自身）。
+    </div>
+
+    <div class="ex-title"><h3>经典习题</h3><span>8 题 · 含作图与最值</span></div>
+
+    <div class="q lv1">
+      <div class="q-h"><span class="qno">4-1</span><span class="tag">基础</span>
+        <div class="q-body"><p>（1）点 <span class="m">A(2, −3)</span> 先向右平移 4 个单位，再向下平移 2 个单位，求对应点坐标；<br>
+        （2）点 <span class="m">P(−1, 2)</span> 绕原点顺时针旋转 90°，求对应点坐标。</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">（1）右移 4：<span class="m">x → 2+4 = 6</span>；下移 2：<span class="m">y → −3−2 = −5</span>，得 <span class="m">(6, −5)</span>。</span>
+          <span class="step">（2）顺时针 90°：<span class="m">(x, y) → (y, −x)</span>，即 <span class="m">(2, 1)</span>。</span>
+          <span class="step res">答案：(6, −5)；　(2, 1)</span>
+          <span class="step why">记不牢时用"画图试一个点"验证：P 在第二象限，顺时针转 90° 应落到第一象限，(2,1) 符合。</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv1">
+      <div class="q-h"><span class="qno">4-2</span><span class="tag">基础</span>
+        <div class="q-body"><p>线段 <span class="m">AB</span> 经过平移后，点 <span class="m">A(1, 2)</span> 的对应点为 <span class="m">A′(4, 6)</span>。若 <span class="m">B(3, −1)</span>，求 <span class="m">B′</span> 的坐标。</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">先求平移量：<span class="m">(4−1, 6−2) = (+3, +4)</span>，即右移 3、上移 4。</span>
+          <span class="step">同一平移下所有点位移相同：<span class="m">B′ = (3+3, −1+4) = (6, 3)</span></span>
+          <span class="step res">答案：B′(6, 3)</span>
+          <span class="step why">平移的"整体性"：每个点都移动同样的向量，这是所有平移计算题的钥匙。</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv1">
+      <div class="q-h"><span class="qno">4-3</span><span class="tag">基础</span>
+        <div class="q-body"><p>下列图形中，是中心对称图形的有：① 平行四边形　② 等边三角形　③ 圆　④ 正五边形　⑤ 正六边形　⑥ 线段</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">判定方法：能否找到一点，绕它旋转 180° 后与自身重合。</span>
+          <span class="step">平行四边形（对角线交点）、圆（圆心）、正六边形（中心）、线段（中点）都满足。</span>
+          <span class="step">等边三角形、正五边形旋转 180° 后方向反了，不重合——它们是<b>轴对称</b>图形。</span>
+          <span class="step res">答案：①③⑤⑥</span>
+          <span class="step why">规律：正 <span class="m">n</span> 边形中，<span class="m">n</span> 为<b>偶数</b>时是中心对称图形，<span class="m">n</span> 为奇数时不是。</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv2">
+      <div class="q-h"><span class="qno">4-4</span><span class="tag">中档</span>
+        <div class="q-body"><p>把 <span class="m">△ABC</span> 绕点 <span class="m">A</span> 顺时针旋转 60° 得到 <span class="m">△ADE</span>。已知 <span class="m">AB = 3</span>，<span class="m">∠BAC = 40°</span>。<br>
+        （1）求 <span class="m">AD</span> 的长；（2）求 <span class="m">∠BAD</span> 与 <span class="m">∠CAE</span> 的度数。</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">（1）旋转前后图形全等，对应线段相等：<span class="m">AD = AB = 3</span></span>
+          <span class="step">（2）<span class="m">B</span> 的对应点是 <span class="m">D</span>，所以 <span class="m">∠BAD</span> 就是旋转角 <span class="m">= 60°</span></span>
+          <span class="step"><span class="m">C</span> 的对应点是 <span class="m">E</span>，同理 <span class="m">∠CAE = 60°</span></span>
+          <span class="step res">答案：AD = 3；∠BAD = 60°，∠CAE = 60°</span>
+          <span class="step why">"对应点与旋转中心连线的夹角 = 旋转角"，每个对应点对都给出同一个旋转角，这是旋转计算的核心依据。</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv2">
+      <div class="q-h"><span class="qno">4-5</span><span class="tag">中档</span>
+        <div class="q-body"><p>在平面直角坐标系中，<span class="m">A(0, 2)</span>，<span class="m">B(4, 4)</span>，点 <span class="m">P</span> 在 <span class="m">x</span> 轴上。当 <span class="m">PA + PB</span> 最小时，求点 <span class="m">P</span> 的坐标及最小值。</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">① 作 <span class="m">A</span> 关于 <span class="m">x</span> 轴的对称点 <span class="m">A′(0, −2)</span>，则 <span class="m">PA = PA′</span>，问题转为 <span class="m">PA′ + PB</span> 最小。</span>
+          <span class="step">② 当 <span class="m">A′、P、B</span> 三点共线时和最小，此时最小值为 <span class="m">A′B</span>。</span>
+          <span class="step">③ 直线 <span class="m">A′B</span> 过 <span class="m">(0,−2)、(4,4)</span>，斜率 <span class="m">= 6/4 = 3/2</span>，即 <span class="m">y = 3x/2 − 2</span>。</span>
+          <span class="step">④ 令 <span class="m">y = 0</span>：<span class="m">3x/2 = 2 → x = 4/3</span>，故 <span class="m">P(4/3, 0)</span>。</span>
+          <span class="step">⑤ <span class="m">A′B = √(4² + 6²) = √52 = 2√13</span></span>
+          <span class="step res">答案：P(4/3, 0)，最小值 2√13</span>
+          <span class="step why">将军饮马三步：<b>找对称点 → 连直线 → 求交点</b>。最小值就是对称点与另一点的距离。</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv2">
+      <div class="q-h"><span class="qno">4-6</span><span class="tag">中档</span>
+        <div class="q-body"><p>说明"把 <span class="m">△ABC</span> 绕点 <span class="m">O</span> 逆时针旋转 90°"的作图步骤。</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">① 连接 <span class="m">OA</span>，以 <span class="m">O</span> 为顶点、<span class="m">OA</span> 为一边，逆时针作 <span class="m">∠AOA′ = 90°</span>，并在射线上截取 <span class="m">OA′ = OA</span>，得点 <span class="m">A′</span>。</span>
+          <span class="step">② 同法作出 <span class="m">B′、C′</span>（保证 <span class="m">OB′ = OB</span>，<span class="m">OC′ = OC</span>，旋转角都是 90°）。</span>
+          <span class="step">③ 顺次连接 <span class="m">A′B′、B′C′、C′A′</span>，<span class="m">△A′B′C′</span> 即为所求。</span>
+          <span class="step why">依据：对应点到旋转中心的距离相等 + 旋转角相等。三个顶点都按同一规则处理，答案要写全三步，缺一扣分。</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv3">
+      <div class="q-h"><span class="qno">4-7</span><span class="tag">拔高</span>
+        <div class="q-body"><p><span class="m">△ABC</span> 的面积为 8，将它沿 <span class="m">BC</span> 方向平移，平移距离等于 <span class="m">BC</span> 的长，得到 <span class="m">△DCE</span>（<span class="m">B、C、E</span> 在同一直线上，<span class="m">A</span> 的对应点为 <span class="m">D</span>）。求四边形 <span class="m">ABED</span> 的面积。</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">① 由平移性质：<span class="m">AB ∥ DE</span> 且 <span class="m">AB = DE</span>，所以四边形 <span class="m">ABED</span> 是<b>平行四边形</b>。</span>
+          <span class="step">② <span class="m">BE = BC + CE = 2BC</span>，而平行四边形 <span class="m">ABED</span> 与 <span class="m">△ABC</span> <b>同高</b>（都以 <span class="m">BC</span> 所在直线为底边所在直线）。</span>
+          <span class="step">③ <span class="m">S<sub>ABED</sub> = BE × h = 2BC × h = 2 × (½·BC·h) = 2 × 8 = 16</span></span>
+          <span class="step res">答案：16</span>
+          <span class="step why">平移后常出现"等底同高"或"底翻倍"的面积关系，先找出平行四边形，再用面积公式比。</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv3">
+      <div class="q-h"><span class="qno">4-8</span><span class="tag">拔高</span>
+        <div class="q-body"><p><span class="m">△ABC</span> 的三个顶点为 <span class="m">A(1,1)、B(4,1)、C(3,3)</span>。将它绕原点 <span class="m">O</span> 逆时针旋转 90°，得到 <span class="m">△A′B′C′</span>。<br>
+        （1）写出 <span class="m">A′、B′、C′</span> 的坐标；（2）求 <span class="m">△A′B′C′</span> 的面积。</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">（1）逆时针 90°：<span class="m">(x,y) → (−y, x)</span></span>
+          <span class="step"><span class="m">A(1,1) → A′(−1,1)</span>；<span class="m">B(4,1) → B′(−1,4)</span>；<span class="m">C(3,3) → C′(−3,3)</span></span>
+          <span class="step">（2）原三角形：<span class="m">AB = 3</span>（水平），<span class="m">C</span> 到 <span class="m">AB</span> 的距离 <span class="m">= 3−1 = 2</span>，<span class="m">S = ½×3×2 = 3</span>。</span>
+          <span class="step">旋转不改变图形形状和大小，所以 <span class="m">S′ = 3</span>。</span>
+          <span class="step res">答案：A′(−1,1)、B′(−1,4)、C′(−3,3)；面积 3</span>
+          <span class="step why">旋转前后全等，面积直接沿用，不必重新算——这是最省时的做法，但要在答卷上写明"旋转不改变图形大小"。</span>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ 第五章 ============ -->
+<section class="chapter c5" id="ch5">
+  <div class="ch-head">
+    <span class="ch-no">CHAPTER 05</span>
+    <h2>四边形</h2>
+    <span class="weight">几何证明主战场 · 性质 + 判定 + 辅助线</span>
+  </div>
+  <div class="ch-body">
+
+    <h3>5.1 平行四边形的性质</h3>
+    <ul>
+      <li><b>边</b>：对边平行且相等；</li>
+      <li><b>角</b>：对角相等，邻角互补（和为 180°）；</li>
+      <li><b>对角线</b>：两条对角线<b>互相平分</b>；</li>
+      <li><b>对称性</b>：是<b>中心对称图形</b>（对称中心为对角线交点），一般不是轴对称图形；</li>
+      <li><b>面积</b>：<span class="m">S = 底 × 高</span>；一条对角线把它分成两个全等三角形，两条对角线分成<b>四个面积相等</b>的三角形。</li>
+    </ul>
+    <figure>
+      <svg viewBox="0 0 230 150" width="230" height="150" role="img" aria-label="平行四边形与对角线">
+        <polygon class="ln" points="45,115 195,115 165,35 15,35"/>
+        <line class="dash" x1="45" y1="115" x2="165" y2="35"/>
+        <line class="dash" x1="195" y1="115" x2="15" y2="35"/>
+        <circle class="pt" cx="105" cy="75" r="2.6"/>
+        <text x="120" y="82" class="lbl">O</text>
+        <text x="38" y="128" class="lbl">A</text>
+        <text x="192" y="128" class="lbl">B</text>
+        <text x="160" y="28" class="lbl">C</text>
+        <text x="8" y="28" class="lbl">D</text>
+      </svg>
+      <figcaption>▱ABCD：AO = OC，BO = OD；S<sub>△AOB</sub> = S<sub>△BOC</sub> = S<sub>△COD</sub> = S<sub>△DOA</sub></figcaption>
+    </figure>
+
+    <h3>5.2 平行四边形的判定（五种）</h3>
+    <table>
+      <tr><th style="width:8%">序号</th><th>判定方法</th><th style="width:34%">常见用法</th></tr>
+      <tr><td>①</td><td>两组对边分别<b>平行</b></td><td>定义法，已知平行时用</td></tr>
+      <tr><td>②</td><td>两组对边分别<b>相等</b></td><td>已知长度关系</td></tr>
+      <tr><td>③</td><td><b>一组</b>对边平行<b>且相等</b></td><td>最常用，平行 + 相等一步到位</td></tr>
+      <tr><td>④</td><td>两组对角分别相等</td><td>角度条件题</td></tr>
+      <tr><td>⑤</td><td>对角线<b>互相平分</b></td><td>出现中点、中线时首选</td></tr>
+    </table>
+    <div class="note">
+      <span class="lbl">反例警告</span><br>
+      "一组对边平行、<b>另一组</b>对边相等"<b>不能</b>判定平行四边形——等腰梯形就是反例（<span class="m">AD∥BC</span>，<span class="m">AB = CD</span>，但不是平行四边形）。
+    </div>
+
+    <h3>5.3 三角形的中位线</h3>
+    <div class="formula">连接三角形两边中点的线段叫<b>中位线</b>；它<b>平行于第三边</b>，且<b>等于第三边的一半</b>：<span class="m">DE ∥ BC，DE = ½BC</span></div>
+    <figure>
+      <svg viewBox="0 0 240 140" width="240" height="140" role="img" aria-label="三角形中位线">
+        <polygon class="ln" points="120,20 25,115 215,115"/>
+        <line x1="72" y1="67" x2="168" y2="67" stroke="#a4453b" stroke-width="1.6" fill="none"/>
+        <circle class="pt" cx="72.5" cy="67.5" r="2.4"/>
+        <circle class="pt" cx="167.5" cy="67.5" r="2.4"/>
+        <text x="112" y="14" class="lbl">A</text>
+        <text x="14" y="126" class="lbl">B</text>
+        <text x="218" y="126" class="lbl">C</text>
+        <text x="52" y="62" class="lbl">D</text>
+        <text x="172" y="62" class="lbl">E</text>
+      </svg>
+      <figcaption>D、E 分别为 AB、AC 中点 → DE ∥ BC 且 DE = ½BC</figcaption>
+    </figure>
+    <p><b>证明思路（必会）：</b>延长 <span class="m">DE</span> 到 <span class="m">F</span> 使 <span class="m">EF = DE</span>，连 <span class="m">CF</span>。由 <span class="m">AE = EC</span>、对顶角相等、<span class="m">DE = EF</span> 得 <span class="m">△ADE ≌ △CFE</span>，从而 <span class="m">CF ∥ AD</span> 且 <span class="m">CF = AD = BD</span>，故四边形 <span class="m">DBCF</span> 是平行四边形，得 <span class="m">DF ∥ BC</span>、<span class="m">DF = BC</span>，即 <span class="m">DE ∥ BC</span> 且 <span class="m">DE = ½BC</span>。</p>
+    <p class="small">一句话记法：<b>倍长中线（中位线）造平行四边形</b>——这是八年级上册最常用的辅助线。</p>
+
+    <h3>5.4 梯形</h3>
+    <ul>
+      <li><b>定义</b>：只有一组对边平行的四边形。平行的两边叫底（上底、下底），另两边叫腰。</li>
+      <li><b>等腰梯形</b>：两腰相等；同一底上的两个角相等；两条对角线相等；是<b>轴对称图形</b>。</li>
+      <li><b>梯形中位线</b>：连接两腰中点的线段，平行于两底，且等于两底和的<b>一半</b>：<span class="m">m = (a + b)/2</span>。</li>
+      <li><b>面积</b>：<span class="m">S = (a + b) × h ÷ 2 = m × h</span></li>
+    </ul>
+    <p><b>四条常用辅助线（把梯形"化"成三角形或平行四边形）：</b></p>
+    <figure>
+      <svg viewBox="0 0 290 160" width="290" height="160" role="img" aria-label="梯形平移一腰">
+        <polygon class="ln" points="75,35 155,35 195,125 35,125"/>
+        <line x1="155" y1="35" x2="115" y2="125" stroke="#a4453b" stroke-width="1.4" fill="none" stroke-dasharray="5 3"/>
+        <text x="68" y="28" class="lbl">A</text>
+        <text x="152" y="28" class="lbl">D</text>
+        <text x="28" y="138" class="lbl">B</text>
+        <text x="198" y="138" class="lbl">C</text>
+        <text x="106" y="138" class="lbl">E</text>
+        <text x="205" y="70" font-size="11" fill="#a4453b">DE∥AB</text>
+      </svg>
+      <figcaption>过 D 作 DE∥AB 交 BC 于 E → 得 ▱ABED 与 △DEC，两腰集中到一个三角形里</figcaption>
+    </figure>
+    <table>
+      <tr><th style="width:24%">辅助线</th><th>作法与作用</th></tr>
+      <tr><td>作高</td><td>过两底端点作高，分成两个直角三角形 + 一个矩形；用于求高、求底</td></tr>
+      <tr><td>平移一腰</td><td>过一顶点作另一腰的平行线，把两腰、两底之差集中到一个三角形</td></tr>
+      <tr><td>延长两腰</td><td>两腰延长交于一点，得到两个相似/等腰三角形（上底∶下底 = 相似比）</td></tr>
+      <tr><td>平移对角线</td><td>过一顶点作对角线的平行线，把两条对角线与两底之和集中到一个三角形</td></tr>
+    </table>
+
+    <h3>5.5 多边形的内角和与外角和</h3>
+    <div class="formula">
+      <span class="m">n</span> 边形内角和 <span class="m">= (n − 2) × 180°</span>；任意多边形的<b>外角和恒为 360°</b><br>
+      正 <span class="m">n</span> 边形：每个内角 <span class="m">= (n−2)×180°/n</span>，每个外角 <span class="m">= 360°/n</span>
+    </div>
+    <p class="small">内角和公式的由来：从一个顶点出发连对角线，把 <span class="m">n</span> 边形分成 <span class="m">(n−2)</span> 个三角形。</p>
+
+    <h3>5.6 平面镶嵌（综合与实践）</h3>
+    <ul>
+      <li>条件：拼在同一顶点处的各内角之和<b>恰好等于 360°</b>，且不留缝隙、不重叠；</li>
+      <li>能单独镶嵌的正多边形只有<b>正三角形（60°）、正方形（90°）、正六边形（120°）</b>；正五边形（108°）不行；</li>
+      <li>组合镶嵌：如正十二边形（150°）+ 两个正三角形（60°×2）+ 正十二边形（150°）= 360°；</li>
+      <li>任意三角形、任意四边形都能单独镶嵌（内角和分别为 180°、360°，可拼成 360°）。</li>
+    </ul>
+
+    <div class="note">
+      <span class="lbl">易错清单</span><br>
+      ① 把"对角线相等""四个角都是直角"当成平行四边形的性质（那是矩形）；<br>
+      ② 判定时条件写不全，如"对边相等"必须"<b>两组</b>"；<br>
+      ③ 混淆<b>中位线</b>（两中点连线）与<b>中线</b>（顶点与对边中点连线）；<br>
+      ④ 梯形题不作辅助线硬算；作高后忘记说明得到的是矩形；<br>
+      ⑤ 证明跳步：由平行直接得相等，不写依据"平行四边形对边相等"；<br>
+      ⑥ 多边形内角和与外角和公式混用。
+    </div>
+
+    <div class="ex-title"><h3>经典习题</h3><span>9 题 · 计算 + 证明</span></div>
+
+    <div class="q lv1">
+      <div class="q-h"><span class="qno">5-1</span><span class="tag">基础</span>
+        <div class="q-body"><p>▱ABCD 中，<span class="m">∠A : ∠B = 1 : 2</span>，求四个内角的度数；若 <span class="m">AB = 5</span>，<span class="m">AD = 8</span>，求周长。</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">邻角互补：<span class="m">∠A + ∠B = 180°</span>，而 <span class="m">∠A:∠B = 1:2</span>，故 <span class="m">∠A = 60°</span>，<span class="m">∠B = 120°</span>。</span>
+          <span class="step">对角相等：<span class="m">∠C = ∠A = 60°</span>，<span class="m">∠D = ∠B = 120°</span>。</span>
+          <span class="step">周长 <span class="m">= 2(AB + AD) = 2×(5+8) = 26</span></span>
+          <span class="step res">答案：60°、120°、60°、120°；周长 26</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv1">
+      <div class="q-h"><span class="qno">5-2</span><span class="tag">基础</span>
+        <div class="q-body"><p>▱ABCD 的对角线交于点 <span class="m">O</span>，<span class="m">AC = 10</span>，<span class="m">BD = 6</span>，<span class="m">AB = 7</span>。求 <span class="m">OA + OB</span> 及 <span class="m">△AOB</span> 的周长。</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">对角线互相平分：<span class="m">OA = ½AC = 5</span>，<span class="m">OB = ½BD = 3</span>，故 <span class="m">OA + OB = 8</span>。</span>
+          <span class="step"><span class="m">△AOB</span> 周长 <span class="m">= OA + OB + AB = 5 + 3 + 7 = 15</span></span>
+          <span class="step res">答案：8；15</span>
+          <span class="step why">凡是给"对角线长"的平行四边形题，第一步就是折半——这是最高频的起手式。</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv1">
+      <div class="q-h"><span class="qno">5-3</span><span class="tag">基础</span>
+        <div class="q-body"><p>（1）一个多边形的内角和是外角和的 3 倍，求它的边数；<br>
+        （2）正十二边形的每个内角是多少度？每个外角呢？</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">（1）外角和为 360°，内角和 <span class="m">= 3×360° = 1080°</span>，由 <span class="m">(n−2)×180° = 1080°</span> 得 <span class="m">n − 2 = 6</span>，<span class="m">n = 8</span>。</span>
+          <span class="step">（2）每个外角 <span class="m">= 360°/12 = 30°</span>，每个内角 <span class="m">= 180° − 30° = 150°</span>。</span>
+          <span class="step res">答案：八边形；150°、30°</span>
+          <span class="step why">求正多边形内角，先用外角更快：内角 = 180° − 360°/n。</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv2">
+      <div class="q-h"><span class="qno">5-4</span><span class="tag">中档</span>
+        <div class="q-body"><p>四边形 <span class="m">ABCD</span> 中，<span class="m">AD ∥ BC</span>。添加下列哪个条件后，<b>不能</b>判定它是平行四边形？<br>
+        A. <span class="m">AD = BC</span>　B. <span class="m">AB ∥ CD</span>　C. <span class="m">AB = CD</span>　D. <span class="m">∠A = ∠C</span></p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">A：一组对边平行且相等 → 能判定（判定③）。</span>
+          <span class="step">B：两组对边分别平行 → 能判定（判定①）。</span>
+          <span class="step">D：<span class="m">AD∥BC → ∠A+∠B=180°</span>，又 <span class="m">∠A=∠C</span>，得 <span class="m">∠C+∠B=180° → AB∥CD</span>，能判定。</span>
+          <span class="step">C：一组对边平行、另一组对边相等，<b>可能是等腰梯形</b>，不能判定。</span>
+          <span class="step res">答案：C</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv2">
+      <div class="q-h"><span class="qno">5-5</span><span class="tag">中档</span>
+        <div class="q-body"><p><span class="m">△ABC</span> 中，<span class="m">D、E</span> 分别是 <span class="m">AB、AC</span> 的中点。<br>
+        （1）若 <span class="m">BC = 8</span>，求 <span class="m">DE</span>；（2）若 <span class="m">DE = 5</span>，求 <span class="m">BC</span>；（3）若 <span class="m">△ADE</span> 的周长为 12，求 <span class="m">△ABC</span> 的周长。</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">（1）<span class="m">DE = ½BC = 4</span></span>
+          <span class="step">（2）<span class="m">BC = 2DE = 10</span></span>
+          <span class="step">（3）<span class="m">AD = ½AB</span>，<span class="m">AE = ½AC</span>，<span class="m">DE = ½BC</span>，所以 <span class="m">C<sub>△ADE</sub> = ½C<sub>△ABC</sub></span>，即 <span class="m">C<sub>△ABC</sub> = 24</span>。</span>
+          <span class="step res">答案：4；10；24</span>
+          <span class="step why">中位线把三角形"整体缩小一半"，周长、边长都成比例，这个结论在填空选择里可直接用。</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv2">
+      <div class="q-h"><span class="qno">5-6</span><span class="tag">中档</span>
+        <div class="q-body"><p>等腰梯形 <span class="m">ABCD</span> 中，<span class="m">AD ∥ BC</span>，<span class="m">AD = 4</span>，<span class="m">BC = 10</span>，腰 <span class="m">AB = CD = 5</span>。求梯形的高和面积。</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">① 平移一腰：过 <span class="m">D</span> 作 <span class="m">DE ∥ AB</span> 交 <span class="m">BC</span> 于 <span class="m">E</span>，则 <span class="m">ABED</span> 是平行四边形，<span class="m">BE = AD = 4</span>，<span class="m">DE = AB = 5</span>。</span>
+          <span class="step">② 于是 <span class="m">EC = 10 − 4 = 6</span>，<span class="m">△DEC</span> 三边为 <span class="m">5、5、6</span>（等腰三角形）。</span>
+          <span class="step">③ 作 <span class="m">△DEC</span> 底边的高，则半底 <span class="m">= 3</span>，高 <span class="m">= √(5² − 3²) = 4</span>，即梯形的高为 4。</span>
+          <span class="step">④ <span class="m">S = (4 + 10) × 4 ÷ 2 = 28</span></span>
+          <span class="step res">答案：高 4，面积 28</span>
+          <span class="step why">"平移一腰"把两腰和两底之差(<span class="m">10−4=6</span>)凑成一个三角形，3-4-5 直角三角形随之出现。</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv3">
+      <div class="q-h"><span class="qno">5-7</span><span class="tag">拔高</span>
+        <div class="q-body"><p>四边形 <span class="m">ABCD</span> 中，<span class="m">E、F、G、H</span> 分别是 <span class="m">AB、BC、CD、DA</span> 的中点。求证：四边形 <span class="m">EFGH</span> 是平行四边形。</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">证明：连接 <span class="m">AC</span>。</span>
+          <span class="step">在 <span class="m">△ABC</span> 中，<span class="m">E、F</span> 分别是 <span class="m">AB、BC</span> 的中点，由三角形中位线定理：<span class="m">EF ∥ AC</span>，<span class="m">EF = ½AC</span>。</span>
+          <span class="step">在 <span class="m">△ADC</span> 中，同理 <span class="m">HG ∥ AC</span>，<span class="m">HG = ½AC</span>。</span>
+          <span class="step">所以 <span class="m">EF ∥ HG</span> 且 <span class="m">EF = HG</span>，由"一组对边平行且相等的四边形是平行四边形"，得 <span class="m">EFGH</span> 是平行四边形。</span>
+          <span class="step res">结论成立（这个结论对<b>任意</b>四边形都成立）</span>
+          <span class="step why">关键动作：<b>连对角线</b>，让中位线"有三角形可依附"。看到"各边中点"必连对角线。</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv3">
+      <div class="q-h"><span class="qno">5-8</span><span class="tag">拔高</span>
+        <div class="q-body"><p>▱ABCD 中，<span class="m">E、F</span> 是对角线 <span class="m">BD</span> 上的两点，且 <span class="m">BE = DF</span>。求证：四边形 <span class="m">AECF</span> 是平行四边形。</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step"><b>证法一（对角线互相平分）：</b>设 <span class="m">AC</span> 与 <span class="m">BD</span> 交于点 <span class="m">O</span>。</span>
+          <span class="step">因为 <span class="m">ABCD</span> 是平行四边形，所以 <span class="m">OA = OC</span>，<span class="m">OB = OD</span>。</span>
+          <span class="step">又 <span class="m">BE = DF</span>，所以 <span class="m">OB − BE = OD − DF</span>，即 <span class="m">OE = OF</span>。</span>
+          <span class="step">四边形 <span class="m">AECF</span> 中，<span class="m">OA = OC</span> 且 <span class="m">OE = OF</span>，对角线互相平分，故 <span class="m">AECF</span> 是平行四边形。</span>
+          <span class="step"><b>证法二（一组对边平行且相等）：</b>由 <span class="m">AB ∥ CD</span> 得 <span class="m">∠ABE = ∠CDF</span>；又 <span class="m">AB = CD</span>，<span class="m">BE = DF</span>，故 <span class="m">△ABE ≌ △CDF</span>（SAS），得 <span class="m">AE = CF</span>，<span class="m">∠AEB = ∠CFD</span>，从而 <span class="m">∠AEF = ∠CFE</span>，<span class="m">AE ∥ CF</span>，所以 <span class="m">AECF</span> 是平行四边形。</span>
+          <span class="step why">两种解法都要会：有对角线交点时走"互相平分"最快；没有交点时走"全等 + 平行且相等"。</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv3">
+      <div class="q-h"><span class="qno">5-9</span><span class="tag">拔高</span>
+        <div class="q-body"><p><span class="m">△ABC</span> 中，<span class="m">AD</span> 平分 <span class="m">∠BAC</span>，<span class="m">BD ⊥ AD</span> 于点 <span class="m">D</span>，<span class="m">E</span> 是 <span class="m">BC</span> 的中点。若 <span class="m">AB = 6</span>，<span class="m">AC = 10</span>，求 <span class="m">DE</span> 的长。</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">① 延长 <span class="m">BD</span> 交 <span class="m">AC</span> 于点 <span class="m">F</span>。</span>
+          <span class="step">② 在 <span class="m">△ABF</span> 中，<span class="m">AD</span> 平分 <span class="m">∠BAF</span> 且 <span class="m">AD ⊥ BF</span>，所以 <span class="m">△ABF</span> 是等腰三角形：<span class="m">AF = AB = 6</span>，且 <span class="m">D</span> 是 <span class="m">BF</span> 的中点。</span>
+          <span class="step">③ 于是 <span class="m">FC = AC − AF = 10 − 6 = 4</span>。</span>
+          <span class="step">④ 在 <span class="m">△BCF</span> 中，<span class="m">D</span> 是 <span class="m">BF</span> 中点、<span class="m">E</span> 是 <span class="m">BC</span> 中点，所以 <span class="m">DE</span> 是中位线，<span class="m">DE = ½FC = 2</span>。</span>
+          <span class="step res">答案：DE = 2</span>
+          <span class="step why">"角平分线 + 垂线"是经典组合：延长垂线必得等腰三角形，再把所求线段放进另一个三角形当地中位线。</span>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ 综合 ============ -->
+<section class="chapter c0" id="ch6">
+  <div class="ch-head">
+    <span class="ch-no">CHAPTER 06</span>
+    <h2>综合与压轴</h2>
+    <span class="weight">跨章 · 3 道大题</span>
+  </div>
+  <div class="ch-body">
+
+    <div class="ex-title"><h3>综合题</h3><span>期末压轴常见类型</span></div>
+
+    <div class="q lv3">
+      <div class="q-h"><span class="qno">6-1</span><span class="tag">压轴</span>
+        <div class="q-body"><p>点 <span class="m">B、C、D</span> 在同一条直线上，<span class="m">△ABC</span> 与 <span class="m">△CDE</span> 都是等边三角形。求证：<span class="m">AD = BE</span>，并求 <span class="m">AD</span> 与 <span class="m">BE</span> 所夹锐角的度数。</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">① 证全等：<span class="m">∠ACB = 60°</span>，<span class="m">∠DCE = 60°</span>，故 <span class="m">∠ACD = 180° − 60° = 120°</span>，<span class="m">∠BCE = 180° − 60° = 120°</span>。</span>
+          <span class="step">又 <span class="m">AC = BC</span>，<span class="m">CD = CE</span>，所以 <span class="m">△ACD ≌ △BCE</span>（SAS）。</span>
+          <span class="step">② 由全等得 <span class="m">AD = BE</span>（对应边相等）。</span>
+          <span class="step">③ 设 <span class="m">AD</span> 与 <span class="m">BE</span> 交于点 <span class="m">P</span>。由全等得 <span class="m">∠CAD = ∠CBE</span>，在 <span class="m">△</span> 中通过"三角形内角和"可推出 <span class="m">∠APB = 60°</span>。</span>
+          <span class="step res">答案：AD = BE；所夹锐角为 60°</span>
+          <span class="step why">这就是"<b>手拉手模型</b>"：两个共顶点的等边三角形，把其中一个绕公共点旋转 60° 就能与另一部分重合，必产生一对全等三角形。结论可记：<b>手拉手，必全等；夹角等于旋转角</b>。</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv3">
+      <div class="q-h"><span class="qno">6-2</span><span class="tag">压轴</span>
+        <div class="q-body"><p>学校用 1200 元购进甲种图书，用 800 元购进乙种图书。甲种每本比乙种贵 4 元，且两种图书购进的数量相同。<br>
+        （1）求甲、乙两种图书每本的进价；<br>
+        （2）若学校计划再购进甲、乙两种图书共 60 本，且总费用不超过 700 元，问甲种图书最多能买多少本？</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step"><b>（1）</b>设乙种每本 <span class="m">x</span> 元，则甲种每本 <span class="m">(x+4)</span> 元。数量相同：</span>
+          <span class="step"><span class="m">1200/(x+4) = 800/x</span></span>
+          <span class="step">交叉相乘：<span class="m">1200x = 800(x+4) → 1200x = 800x + 3200 → 400x = 3200 → x = 8</span></span>
+          <span class="step">检验：<span class="m">x=8</span> 时分母不为 0，且 <span class="m">1200/12 = 800/8 = 100</span>（本），符合题意。</span>
+          <span class="step">答：甲种每本 12 元，乙种每本 8 元。</span>
+          <span class="step"><b>（2）</b>设买甲种 <span class="m">m</span> 本，则乙种 <span class="m">(60 − m)</span> 本：</span>
+          <span class="step"><span class="m">12m + 8(60 − m) ≤ 700 → 12m + 480 − 8m ≤ 700 → 4m ≤ 220 → m ≤ 55</span></span>
+          <span class="step res">答案：甲种最多买 55 本</span>
+          <span class="step why">第（1）问是分式方程（必须验根），第（2）问是一元一次不等式；两问拼接是期末压轴的标准结构，别把两问的方法混用。</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="q lv3">
+      <div class="q-h"><span class="qno">6-3</span><span class="tag">压轴</span>
+        <div class="q-body"><p>▱ABCD 中，<span class="m">AB = 5</span>，<span class="m">AD = 8</span>，<span class="m">∠ABC</span> 的平分线交 <span class="m">AD</span> 于点 <span class="m">E</span>。求 <span class="m">DE</span> 的长。</p></div>
+      </div>
+      <details class="ans"><summary>查看解析</summary>
+        <div class="sol">
+          <span class="step">① <span class="m">BE</span> 平分 <span class="m">∠ABC</span>，所以 <span class="m">∠ABE = ∠EBC</span>。</span>
+          <span class="step">② <span class="m">AD ∥ BC</span>，所以 <span class="m">∠AEB = ∠EBC</span>（内错角相等）。</span>
+          <span class="step">③ 于是 <span class="m">∠ABE = ∠AEB</span>，<span class="m">△ABE</span> 是等腰三角形，<span class="m">AE = AB = 5</span>。</span>
+          <span class="step">④ <span class="m">DE = AD − AE = 8 − 5 = 3</span></span>
+          <span class="step res">答案：DE = 3</span>
+          <span class="step why">模型总结：<b>平行四边形 + 角平分线 → 等腰三角形</b>（"平行 + 平分 → 等腰"）。这是选择填空的高频套路，几乎每年都考。</span>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ 速查 ============ -->
+<section class="chapter c0" id="ch7">
+  <div class="ch-head">
+    <span class="ch-no">APPENDIX</span>
+    <h2>公式速查 + 易错总表 + 复习路线</h2>
+  </div>
+  <div class="ch-body">
+
+    <h3>A. 全册公式速查</h3>
+    <table>
+      <tr><th style="width:24%">模块</th><th>公式 / 结论</th></tr>
+      <tr><td>因式分解</td><td><span class="m">a²−b²=(a+b)(a−b)</span>；<span class="m">a²±2ab+b²=(a±b)²</span></td></tr>
+      <tr><td>分式</td><td><span class="m">A/B=(A·M)/(B·M)</span>；<span class="m">A/B ÷ C/D = A/B · D/C</span>；<span class="m">(A/B)ⁿ=Aⁿ/Bⁿ</span></td></tr>
+      <tr><td>分式方程</td><td>去分母 → 解整式方程 → 验根（公分母是否为 0）</td></tr>
+      <tr><td>平均数</td><td><span class="m">x̄ = Σxᵢ/n</span>；<span class="m">x̄ = Σxᵢfᵢ / Σfᵢ</span></td></tr>
+      <tr><td>方差</td><td><span class="m">s² = 1/n · Σ(xᵢ − x̄)²</span>；加常数不变，乘 <span class="m">k</span> 变 <span class="m">k²</span> 倍</td></tr>
+      <tr><td>四分位距</td><td><span class="m">IQR = Q₃ − Q₁</span></td></tr>
+      <tr><td>平移坐标</td><td>右加左减、上加下减：<span class="m">(x±a, y±b)</span></td></tr>
+      <tr><td>旋转坐标</td><td>逆 90°：<span class="m">(−y, x)</span>；顺 90°：<span class="m">(y, −x)</span>；180°：<span class="m">(−x, −y)</span></td></tr>
+      <tr><td>平行四边形</td><td>对边平行且相等；对角相等；对角线互相平分；<span class="m">S = 底×高</span></td></tr>
+      <tr><td>中位线</td><td>三角形：<span class="m">DE ∥ BC，DE = ½BC</span>；梯形：<span class="m">m = (a+b)/2</span></td></tr>
+      <tr><td>多边形</td><td>内角和 <span class="m">(n−2)×180°</span>；外角和 <span class="m">360°</span>；正 <span class="m">n</span> 边形内角 <span class="m">180° − 360°/n</span></td></tr>
+      <tr><td>梯形面积</td><td><span class="m">S = (a+b)h/2 = m·h</span></td></tr>
+    </table>
+
+    <h3>B. 易错总表（考前扫一眼）</h3>
+    <table>
+      <tr><th style="width:14%">章节</th><th>最高频的 3 个坑</th></tr>
+      <tr><td>因式分解</td><td>分解不彻底；提公因式漏 1；负号处理错</td></tr>
+      <tr><td>分式</td><td>去分母漏乘常数项；忘记验根；值为 0 漏"分母≠0"</td></tr>
+      <tr><td>数据分析</td><td>中位数忘排序；方差漏平方/漏除 n；只报数字不给结论</td></tr>
+      <tr><td>平移旋转</td><td>旋转方向反；平移距离取错；对应点标错</td></tr>
+      <tr><td>四边形</td><td>"一组对边平行、另一组相等"误判；中位线与中线混；证明跳步</td></tr>
+    </table>
+
+    <h3>C. 六周复习路线</h3>
+    <table>
+      <tr><th style="width:16%">阶段</th><th style="width:14%">时间</th><th>任务</th></tr>
+      <tr><td>第 1 轮</td><td>2 周</td><td>因式分解 + 分式：每天 10 道计算，目标是"提公因式一眼看出、公式套得准"</td></tr>
+      <tr><td>第 2 轮</td><td>1.5 周</td><td>分式方程应用题专项：工程 / 行程 / 销售各刷 5 题，固定"设—列—解—验—答"模板</td></tr>
+      <tr><td>第 3 轮</td><td>1 周</td><td>统计：概念 + 方差计算 + 箱线图读图，重点练"结论 + 理由"的表述</td></tr>
+      <tr><td>第 4 轮</td><td>1.5 周</td><td>四边形证明：整理 10 个基本图形（含中位线、角平分线、梯形四辅助线）</td></tr>
+      <tr><td>冲刺</td><td>考前 3 天</td><td>只看错题本和本页"易错总表"，不再刷新题</td></tr>
+    </table>
+
+    <div class="tip">
+      <span class="lbl">提分提醒</span><br>
+      这份卷面 80% 的分都丢在"会但做错"上：<b>计算跳步、结论不写完整、证明缺依据</b>。所以每道题做完，花 10 秒检查三件事——① 分母/根号有没有限制条件；② 分式方程验根了吗；③ 结论句写了吗。
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  依据鲁教版（五四学制）数学八年级上册 2026 秋修订版教材整理 · 供烟台市初三学生复习与练习使用<br>
+  旧版教材差异：第三章为"数据的分析"（平均数 / 中位数与众数 / 从统计图分析集中趋势 / 数据的离散程度），第五章为"平行四边形"（中心对称单列一节，无"梯形"一节），习题中的箱线图题可跳过。
+</footer>
+
+</div>
+
+<script>
+  var openAll = document.getElementById('openAll');
+  var closeAll = document.getElementById('closeAll');
+  openAll.addEventListener('click', function(){
+    document.querySelectorAll('details.ans').forEach(function(d){ d.open = true; });
+  });
+  closeAll.addEventListener('click', function(){
+    document.querySelectorAll('details.ans').forEach(function(d){ d.open = false; });
+  });
+  window.addEventListener('beforeprint', function(){
+    document.querySelectorAll('details.ans').forEach(function(d){ d.open = true; });
+  });
+</script>
+</body>
+</html>
